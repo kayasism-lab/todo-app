@@ -60,13 +60,15 @@ body {
 
 .todo-form {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 10px;
   margin-bottom: 14px;
+  align-items: stretch;
 }
 
 .todo-form input {
   width: 100%;
+  min-width: 0;
   padding: 14px 16px;
   border: none;
   border-radius: 16px;
@@ -84,12 +86,15 @@ body {
 .todo-form button {
   border: none;
   border-radius: 16px;
+  min-width: 68px;
   padding: 0 18px;
   background: linear-gradient(135deg, #5e7cff, #7a8dff);
   color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
   box-shadow: 0 10px 20px rgba(94, 124, 255, 0.24);
   transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -307,7 +312,8 @@ body {
   }
 
   .todo-form {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px;
   }
 
   .todo-item {
