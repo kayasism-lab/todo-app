@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TO DO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="todo-card">
+      <header class="header">
+        <h1>할일 목록</h1>
+        <p>할일을 추가하고, 수정하고, 삭제해보세요.</p>
+      </header>
+
+      <div class="header-banner">
+        <img
+          src="assets/header-icons.png"
+          alt="밝은 파스텔 아이콘 배너"
+          class="header-banner-image"
+        >
+      </div>
+
+      <form class="todo-form" id="todo-form">
+        <input
+          type="text"
+          id="todo-input"
+          placeholder="할일을 입력하세요"
+          autocomplete="off"
+          required
+        >
+        <button type="submit" id="submit-button">추가</button>
+      </form>
+
+      <p class="form-message" id="form-message" aria-live="polite"></p>
+
+      <ul class="todo-list" id="todo-list"></ul>
+
+      <div class="empty-state" id="empty-state">
+        아직 등록된 할일이 없습니다.
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
